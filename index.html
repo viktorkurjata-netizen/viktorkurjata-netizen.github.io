@@ -1,20 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Kolekcja Szali Ultras</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Kolekcja Szali Ultras</title>
+<style>
+body { font-family: Arial; background:#111; color:#fff; }
+input { padding:10px; width:90%; margin:10px; }
+.gallery { display:grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap:10px; }
+.gallery img { width:100%; border-radius:6px; }
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>🧣 KOLEKCJA SZALI ULTRAS</h1>
-  <input type="text" id="search" placeholder="Szukaj: klub, derby, europa...">
-</header>
+<h1>🧣 Kolekcja Szali Ultras</h1>
 
-<main id="gallery"></main>
+<input type="text" placeholder="Szukaj szalika...">
 
-<script src="app.js"></script>
+<div class="gallery">
+  <img src="images/szal1.jpg" alt="Szal 1">
+  <img src="images/szal2.jpg" alt="Szal 2">
+  <img src="images/szal3.jpg" alt="Szal 3">
+</div>
+
 </body>
 </html>
