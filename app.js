@@ -1,27 +1,7 @@
-fetch("data.json")
-  .then(r => r.json())
-  .then(data => {
-    const gallery = document.getElementById("gallery");
-    const search = document.getElementById("search");
+const gallery = document.getElementById("gallery");
 
-    function render(items) {
-      gallery.innerHTML = "";
-      items.forEach(i => {
-        gallery.innerHTML += `
-          <div class="card">
-            <img src="${i.image}">
-            <div class="info">${i.club} – ${i.opponent} (${i.year})</div>
-          </div>
-        `;
-      });
-    }
-
-    render(data);
-
-    search.addEventListener("input", e => {
-      const q = e.target.value.toLowerCase();
-      render(data.filter(i =>
-        `${i.club} ${i.opponent} ${i.year}`.toLowerCase().includes(q)
-      ));
-    });
-  });
+for (let i = 1; i <= 400; i++) {
+  const img = document.createElement("img");
+  img.src = `${String(i).padStart(3,"0")}.jpg`; // JEŚLI ZOSTANĄ W ROOT
+  gallery.appendChild(img);
+}
